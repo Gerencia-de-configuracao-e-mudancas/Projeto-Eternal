@@ -42,7 +42,7 @@ header nav ul li a {
 }
 
 main {
-    margin-left: 300px;
+    margin-left: 30px;
     padding: 100px 20px 20px 50px;
 }
 
@@ -59,14 +59,13 @@ main {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-}
-
-.conteudo-filme img {
+    background-color: white;
     width: 1000px;
     height: 700px;
-   
-  
+
 }
+
+
 
 .conteudo-info {
     width: auto;
@@ -78,8 +77,50 @@ main {
     padding: 20px;
     border-radius: 8px;
 }
+button {
+    border: none;
+    width: 130px;
+    height: 50px;
+    border-radius: 5px;
+}
 
 .conteudo-info h3 {
     font-size: 24px;
+
+}
+.filme {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 310px;
+    height: 190px;
+    box-shadow: 10px 10px 20px #000000;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+.filme:hover {
+    transform: scale(0.9);
     
+    
+}
+
+.filme h4 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.filme-grid {
+    display: flex;
+    gap: 40px;
+    
+    
+    
+}
+.agrupar {
+    margin-top: 130px;
+}
+h3 {
+    margin-bottom: 20px;
 }
