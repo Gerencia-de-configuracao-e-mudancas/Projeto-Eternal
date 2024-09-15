@@ -9,6 +9,21 @@
     
 </head>
 <body>
+    <main>
+        <section class="conteudo">
+            <h2>Buscar Séries</h2>
+            <div>
+                <input type="text" id="tituloSerie" placeholder="Digite o nome da série">
+                <button onclick="buscarSeries()">Buscar</button>
+            </div>
+            <div id="seriesContainer"></div>
+            <div id="paginationControls">
+                <button onclick="mudarPagina(-1)">Anterior</button>
+                <span id="paginaAtual">1</span>
+                <button onclick="mudarPagina(1)">Próxima</button>
+            </div>
+        </section>
+    </main>    
     <header>
         <div class="logo">
             <h1>Site</h1>
