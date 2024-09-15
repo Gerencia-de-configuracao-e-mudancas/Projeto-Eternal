@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             serieDiv.innerHTML = `
                 <h3>${serie.titulo}</h3>
                 <img src="${serie.imagem}" alt="${serie.titulo}" />
+                <p><strong>Gêneros:</strong> ${serie.generos.join(', ')}</p>
                 <p>${serie.resumo.replace(/<\/?p>/g, '')}</p>
             `;
             seriesContainer.appendChild(serieDiv);
