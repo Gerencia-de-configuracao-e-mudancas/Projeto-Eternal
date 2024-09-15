@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const seriesContainer = document.getElementById('seriesContainer');
     const paginaAtualElement = document.getElementById('paginaAtual');
     let paginaAtual = 1;
-    let limite = 10;
+    const limite = 4;
+    let totalPaginas = 1;
 
     formBusca.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -21,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log('Dados recebidos:', data);
                     if (data && Array.isArray(data.data)) {
                         exibirSeries(data.data);
-                        atualizarPaginacao(data.total);
+                        totalPaginas = Math.ceil(data.total / limite); // Atualiza o total de páginas
+                        atualizarPaginacao();
+                        scrollParaTopo();
                     } else {
                         console.error('Formato inesperado dos dados:', data);
                         seriesContainer.innerHTML = '<p>Não foram encontradas séries.</p>';
@@ -41,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             serieDiv.className = 'serie';
             serieDiv.innerHTML = `
                 <h3>${serie.titulo}</h3>
-                <img src="${serie.imagem}" alt="${serie.titulo}" />
+                <img src="${serie.imagem}" alt="${serie.titulo}" style="width: 600px; height: 400px; object-fit: cover;" />
                 <p><strong>Gêneros:</strong> ${serie.generos.join(', ')}</p>
                 <p>${serie.resumo.replace(/<\/?p>/g, '')}</p>
             `;
@@ -49,26 +52,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function atualizarPaginacao(total) {
-        console.log('Atualizando paginação:', total);
-        const totalPaginas = Math.ceil(total / limite);
+    function atualizarPaginacao() {
+        console.log('Atualizando paginação');
         paginaAtualElement.textContent = paginaAtual;
+        document.querySelector('#paginationControls button:nth-child(1)').disabled = paginaAtual <= 1;
+        document.querySelector('#paginationControls button:nth-child(3)').disabled = paginaAtual >= totalPaginas;
+        
         document.getElementById('paginationControls').style.display = totalPaginas > 1 ? 'block' : 'none';
     }
 
     function mudarPagina(incremento) {
-        console.log(`Mudando página: ${incremento}`);
         const novaPagina = paginaAtual + incremento;
 
-        if (novaPagina >= 1) {
+        if (novaPagina >= 1 && novaPagina <= totalPaginas) {
             paginaAtual = novaPagina;
             buscarSeries();
         }
     }
 
+    function scrollParaTopo() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     document.querySelector('#paginationControls button:nth-child(1)').addEventListener('click', () => mudarPagina(-1));
     document.querySelector('#paginationControls button:nth-child(3)').addEventListener('click', () => mudarPagina(1));
-
-    // Inicializa a busca com a página 1
     buscarSeries();
 });
