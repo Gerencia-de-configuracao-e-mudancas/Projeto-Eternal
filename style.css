@@ -119,9 +119,49 @@ button {
 h3 {
     margin-bottom: 20px;
 }
+#seriesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
 
+#paginationControls {
+    margin-top: 20px;
+}
 
+#paginationControls button {
+    background-color: #00a8e1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+#paginationControls button:hover {
+    background-color: #0073a6;
+}
+
+.filme img {
+    width: 100px;
+    height: 150px;
+}
+.serie img {
+    width: 1000px;
+    height: 768px;
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+.barra {
+    height: 40px;
+    width: 280px;
+}
+.busca {
+    height: 40px;
+    width: 100px;
+}
 
 
 

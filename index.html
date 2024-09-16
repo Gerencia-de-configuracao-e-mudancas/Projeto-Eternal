@@ -14,22 +14,18 @@
             <h1>Site</h1>
         </div>
         <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Filmes</a></li>
-                <li><a href="#">Séries</a></li>
-                <li><a href="#">Minha Lista</a></li>
+            <ul>              
+            <form id="formBusca">
+                <input type="text" id="inputBusca" placeholder="Digite o nome da série" required class="barra">
+                <button type="submit" class="busca">Buscar</button>
+            </form>
             </ul>
         </nav>
     </header>
     <main>
         <div id="paginacao"></div>
         <section class="conteudo">
-            <h2>Buscar Séries</h2>
-            <form id="formBusca">
-                <input type="text" id="inputBusca" placeholder="Digite o nome da série" required>
-                <button type="submit">Buscar</button>
-            </form>
+           
             <div id="seriesContainer"></div>
             <div id="paginationControls">
                 <button onclick="mudarPagina(-1)">Anterior</button>
@@ -58,7 +54,7 @@
             <h3>conteudo 1</h3>
             <div class="filme-grid">
 
-                <a href="pagina.html" class="button">
+                <a href="pagina.html" >
                     <div class="filme"> </div>
                 </a>
 
