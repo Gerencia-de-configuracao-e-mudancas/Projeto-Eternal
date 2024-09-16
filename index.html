@@ -8,20 +8,33 @@
     <title>Nome do Site</title>
     
 </head>
-<body>
+<body>   
     <header>
         <div class="logo">
             <h1>Site</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Filmes</a></li>
-                <li><a href="#">Séries</a></li>
-                <li><a href="#">Minha Lista</a></li>
+                <form id="formBusca">
+                    <input type="text" id="inputBusca" placeholder="Digite o nome da série" required class="input">
+                    <button type="submit" class="botao">Buscar</button>
+                </form>
             </ul>
         </nav>
     </header>
+    <main>
+        <div id="paginacao"></div>
+        <section class="conteudo">
+            <h2>Buscar Séries</h2>
+           
+            <div id="seriesContainer"></div>
+            <div id="paginationControls">
+                <button onclick="mudarPagina(-1)">Anterior</button>
+                <span id="paginaAtual">1</span>
+                <button onclick="mudarPagina(1)">Próxima</button>
+            </div>
+        </section>
+    </main> 
 
         
         <div class="conteudo-filme">
@@ -115,6 +128,7 @@
         </div>
     </section>
     </main>
+       
     
 </body>
 </html>
