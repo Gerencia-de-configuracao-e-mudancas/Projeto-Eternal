@@ -43,11 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const serieDiv = document.createElement('div');
             serieDiv.className = 'serie';
             serieDiv.innerHTML = `
+                
+                <img src="${serie.imagem}" alt="${serie.titulo}" style="width: auto; height: auto; object-fit: cover;" />
+               
+                
+            `;
+            const serieTextDiv = document.createElement('div');
+            serieTextDiv.className = 'serieText';
+            serieTextDiv.innerHTML = `
                 <h3>${serie.titulo}</h3>
-                <img src="${serie.imagem}" alt="${serie.titulo}" style="width: 600px; height: 400px; object-fit: cover;" />
                 <p><strong>Gêneros:</strong> ${serie.generos.join(', ')}</p>
                 <p>${serie.resumo.replace(/<\/?p>/g, '')}</p>
             `;
+            serieDiv.appendChild(serieTextDiv);
             seriesContainer.appendChild(serieDiv);
         });
     }
@@ -106,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 4,
             "titulo": "Arrow",
             "generos": ["Drama", "Action", "Science-Fiction"],
+            
             "imagem": "http://static.tvmaze.com/uploads/images/original_untouched/165/414895.jpg",
             "resumo": "<p>After a violent shipwreck, billionaire playboy Oliver Queen was missing and presumed dead for five years before being discovered alive on a remote island in the Pacific. He returned home to Starling City, welcomed by his devoted mother Moira, beloved sister Thea and former flame Laurel Lance. With the aid of his trusted chauffeur/bodyguard John Diggle, the computer-hacking skills of Felicity Smoak and the occasional, reluctant assistance of former police detective, now beat cop, Quentin Lance, Oliver has been waging a one-man war on crime.</p>"
           },
@@ -1778,7 +1787,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     serieDiv.className = 'filme';
                     serieDiv.innerHTML = `
                         <img src="${serie.imagem}" alt="${serie.titulo}" />
-                        <h4>${serie.titulo}</h4>
+                      
                     `;
                     grid.appendChild(serieDiv);
                 }
@@ -1812,3 +1821,14 @@ document.addEventListener('DOMContentLoaded', () => {
     exibirSeriesPorGenero(seriesData);
     criarCarrossel();
 });
+function ocultarMain() {
+  var mainElement = document.querySelector("main");
+  if (mainElement.style.display === "none") {
+      mainElement.style.display = "block";
+  } else {
+      mainElement.style.display = "none";
+  }
+}
+
+
+

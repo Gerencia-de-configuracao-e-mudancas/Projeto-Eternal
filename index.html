@@ -15,13 +15,16 @@
             <ul>              
                 <form id="formBusca">
                     <input type="text" id="inputBusca" placeholder="Digite o nome da série" required class="barra">
-                    <button type="submit" class="busca">Buscar</button>
+                    <button type="submit" class="busca" id="button" onclick="ocultarMain()">Buscar</button>
                 </form>
             </ul>
         </nav>
     </header>
+    
     <main>
+        <div id="paginacao"></div>
         <section class="conteudo">
+           
             <div id="seriesContainer"></div>
             <div id="paginationControls">
                 <button onclick="mudarPagina(-1)">Anterior</button>
@@ -30,16 +33,32 @@
             </div>
         </section>
 
-        <section class="conteudo-filme">
-            <div class="conteudo-info">
-                <h3>Filme em Destaque</h3>
-                <p></p>
-                <button>Assistir</button>
-                <button>Adicionar à Lista</button>
+   
+    
+        <h3 class="destaque">Destaque da semana</h3>
+        <section class="banner">
+            
+           
+            <div class="banner-content">
+                <div class="imagem"><img src="transferir.jpeg" alt="o mentalista">
+                </div>
+                 <div class="infor-container">
+                    <h1 class="title">Título do Filme</h1>
+                  
+                    <p class="genres"><span>Generos:</span> Ação | Aventura | Ficção Científica</p>
+                    
+                    <p class="synopsis"><span class="negrito">Sinopse:</span> 
+                        Em um futuro distante, a humanidade enfrenta uma ameaça desconhecida que desafia as leis da física. 
+                        Um grupo de heróis é formado para descobrir a origem dessa anomalia e salvar a galáxia de sua destruição iminente.
+                    </p>
+                </div>
+               
             </div>
         </section>
+   
+    
 
-        <section>
+        <section class="divSeries">
             <h3>Ação</h3>
             <div class="carrossel">
                 <button class="carrossel-btn esquerda">&lt;</button>
@@ -48,7 +67,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="divSeries">
             <h3>Drama</h3>
             <div class="carrossel">
                 <button class="carrossel-btn esquerda">&lt;</button>
@@ -57,7 +76,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="divSeries">
             <h3>Comédia</h3>
             <div class="carrossel">
                 <button class="carrossel-btn esquerda">&lt;</button>
@@ -66,7 +85,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="divSeries">
             <h3>Romance</h3>
             <div class="carrossel">
                 <button class="carrossel-btn esquerda">&lt;</button>
