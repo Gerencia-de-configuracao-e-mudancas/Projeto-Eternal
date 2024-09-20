@@ -3,7 +3,7 @@ Este projeto é um site simples que permite aos usuários explorar séries. As s
 
 ## Colaboradores
 * Mateus Augusto
-* FRancisco de Assis
+* Francisco de Assis
   
 
 ## Funcionalidades
