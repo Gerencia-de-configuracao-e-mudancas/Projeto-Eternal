@@ -35,14 +35,15 @@ header nav ul li a {
     font-weight: 500;
     transition: color 0.3s ease;
 }
-.botao {
+
+.logo button {
     background-color: #0f171e;
     
     color: #fff;
     border: none;
-   
-    
-   
+}
+button h1 {
+    font-size: 30px;
 }
 
 
@@ -107,13 +108,13 @@ main {
 
 .genres {
     font-size: 1.5em;
-    font-style: italic;
+    
     margin-bottom: 40px;
     
 }
 
 .synopsis {
-    font-size: 1.3em;
+    font-size: 1.4em;
     line-height: 1.6;
    
 }
