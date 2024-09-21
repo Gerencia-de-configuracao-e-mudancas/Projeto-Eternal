@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: #0f171e;
+    color: #fff;
+}
+
+header {
+    background-color: #0f171e;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #232f3e;
+}
+header .logo h1 {
+   
+    font-size: 30px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+button {
+    background-color: #0f171e;
+    color: #fff;
+    border: none;
+   
+    
+   
+}
+.barra {
+    height: 40px;
+    width: 280px;
+}
+.busca {
+    height: 40px;
+    width: 100px;
+}
+
+main {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 30px;
+    margin-left: 50px;
+   
+    
+}
+
+.banner {
+    
+    
+    margin-top: 50px;
+    background-size: cover;
+    background-position: center;
+    width: 90vw;
+    height: 80vh;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+   
+}
+
+.banner-content {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    height: 100%;
+    
+   
+}
+.infor-container {
+    margin-left: 20px
+    
+}
+.imagem img{
+    
+    height: 100%;
+}
+.title {
+    font-size: 3em;
+    margin-bottom: 60px;
+    
+}
+
+.genres {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 40px;
+    
+}
+
+.synopsis {
+    font-size: 1.3em;
+    line-height: 1.6;
+   
+}
+span {
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.6;
+}

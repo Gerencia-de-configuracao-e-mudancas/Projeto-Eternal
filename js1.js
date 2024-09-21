@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
           serieTextDiv.className = 'serieText';
           serieTextDiv.innerHTML = `
               <h3>${serie.titulo}</h3>
-              <p><strong>Gêneros:</strong> ${serie.generos.join(', ')}</p>
+              <p><strong>Gêneros:</strong> ${serie.generos.join(' | ')}</p>
               <p>${serie.resumo.replace(/<\/?p>/g, '')}</p>
           `;
           serieDiv.appendChild(serieTextDiv);
@@ -1782,20 +1782,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'Romance': document.querySelector('section:nth-of-type(6) .filme-grid')
         };
 
-        series.forEach(serie => {
-            serie.generos.forEach(genero => {
-                const grid = seçõesGeneros[genero];
-                if (grid) {
-                    const serieDiv = document.createElement('div');
-                    serieDiv.className = 'filme';
-                    serieDiv.innerHTML = `
-                        <img src="${serie.imagem}" alt="${serie.titulo}" />
-                      
-                    `;
-                    grid.appendChild(serieDiv);
-                }
-            });
-        });
+        
     }
     function criarCarrossel() {
         const carrosselContainers = document.querySelectorAll('.carrossel');
@@ -1824,14 +1811,7 @@ document.addEventListener('DOMContentLoaded', () => {
     exibirSeriesPorGenero(seriesData);
     criarCarrossel();
 });
-function ocultarMain() {
-  var mainElement = document.querySelector("main");
-  if (mainElement.style.display === "none") {
-      mainElement.style.display = "block";
-  } else {
-      mainElement.style.display = "none";
-  }
-}
+
 
 
 

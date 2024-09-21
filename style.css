@@ -22,10 +22,7 @@ header {
     z-index: 100;
     border-bottom: 1px solid #232f3e;
 }
-header .logo h1 {
-    color: #00a8e1;
-    font-size: 24px;
-}
+
 
 header nav ul {
     list-style: none;
@@ -38,13 +35,22 @@ header nav ul li a {
     font-weight: 500;
     transition: color 0.3s ease;
 }
+.botao {
+    background-color: #0f171e;
+    
+    color: #fff;
+    border: none;
+   
+    
+   
+}
 
 
 main {
     margin-top: 50px;
     margin-bottom: 20px;
     padding: 30px;
-    margin-left: 20px;
+    margin-left: 50px;
    
     
 }
@@ -128,6 +134,10 @@ span {
     width: 90vw;
     height: 70vh;
 }
+.serie img {
+    max-width: 350px;
+    height: auto;
+}
 
 .serieText {
     margin-left: 20px;
@@ -163,8 +173,8 @@ button {
 .filme {
     text-align: center;
     background-color: #000000;
-    width: 230px;
-    height: 330px;
+    width: 265px;
+    height: 365px;
     cursor: pointer;
     flex-shrink: 0;
 }
@@ -248,7 +258,7 @@ h3 {
 
 .filme-grid {
     display: flex;
-    justify-content: center;
+    padding-bottom: 10px;
     gap: 20px;
     scroll-behavior: smooth;
     overflow-x: auto;
