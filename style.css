@@ -303,3 +303,6 @@ h3 {
 .carrossel-btn:hover {
     background-color: orange;
 }
+#paginationControls {
+    display: none;
+}
