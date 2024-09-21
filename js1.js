@@ -55,11 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
           serieTextDiv.className = 'serieText';
           serieTextDiv.innerHTML = `
               <h3>${serie.titulo}</h3>
-<<<<<<< HEAD
               <p><strong>Gêneros:</strong> ${serie.generos.join(' | ')}</p>
-=======
-              <p><strong>Gêneros:</strong> ${serie.generos.join(', ')}</p>
->>>>>>> a936829940e94329f95bf4274520c46234d333e7
               <p>${serie.resumo.replace(/<\/?p>/g, '')}</p>
           `;
           serieDiv.appendChild(serieTextDiv);
