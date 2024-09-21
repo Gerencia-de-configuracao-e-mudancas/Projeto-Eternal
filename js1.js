@@ -94,10 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('#paginationControls button:nth-child(3)').addEventListener('click', () => mudarPagina(1));
 });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a936829940e94329f95bf4274520c46234d333e7
 document.addEventListener('DOMContentLoaded', () => {
     const seriesData = [
         {
@@ -106,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "generos": ["Drama", "Science-Fiction", "Thriller"],
             "imagem": "http://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg",
             "resumo": "<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>"
-            "link": "https://www.tvmaze.com/shows/95/falling-skies",
           },
           {
             "id": 2,
